@@ -6,7 +6,7 @@ import requests
 
 
 
-client = MongoClient("mongodb://localhost:27017")
+client = MongoClient("mongodb://192.168.99.100:27017")
 db = client.primer
 '''
 db.drummers.drop()
@@ -65,8 +65,7 @@ db.drummers.insert_one(
     }
 )
 
-
-
+'''
 cur = db.drummers.find()
 options = list()
 for doc in cur:
@@ -77,7 +76,7 @@ for doc in cur:
 
             #options.append(doc['names'])
 
-'''
+
 #print q_list
 #for q in q_list:
 #    print q
